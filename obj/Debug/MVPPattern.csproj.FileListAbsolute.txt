@@ -1,0 +1,11 @@
+C:\c#\MVPPattern\obj\Debug\MVPPattern.csproj.AssemblyReference.cache
+C:\c#\MVPPattern\obj\Debug\MVPPattern.csproj.SuggestedBindingRedirects.cache
+C:\c#\MVPPattern\obj\Debug\MVPPattern.Properties.Resources.resources
+C:\c#\MVPPattern\obj\Debug\MVPPattern.PetView.resources
+C:\c#\MVPPattern\obj\Debug\MVPPattern.csproj.GenerateResource.cache
+C:\c#\MVPPattern\obj\Debug\MVPPattern.csproj.CoreCompileInputs.cache
+C:\c#\MVPPattern\bin\Debug\MVPPattern.exe.config
+C:\c#\MVPPattern\bin\Debug\MVPPattern.exe
+C:\c#\MVPPattern\bin\Debug\MVPPattern.pdb
+C:\c#\MVPPattern\obj\Debug\MVPPattern.exe
+C:\c#\MVPPattern\obj\Debug\MVPPattern.pdb
