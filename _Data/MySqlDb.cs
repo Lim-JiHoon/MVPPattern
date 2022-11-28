@@ -77,13 +77,13 @@ namespace MVPPattern.Data
       }
     }
 
-    public long Execute(string query, MySqlParameter[] mySqlParameters)
+    public long Execute(string query, MySqlParam[] parameters)
     {
       using (MySqlCommand cmd = new MySqlCommand(query, _conn))
       {
-        foreach (MySqlParameter parameter in mySqlParameters)
-        {          
-          cmd.Parameters.Add(parameter);
+        foreach (MySqlParam parameter in parameters)
+        {
+          cmd.Parameters.AddWithValue(parameter.Name, parameter.Value);
         }
 
         cmd.ExecuteNonQuery();

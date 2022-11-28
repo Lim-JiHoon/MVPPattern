@@ -15,7 +15,7 @@ namespace MVPPattern.Views
     string PetColour { get; set; }
 
     string SearchValue { get; set; }
-    bool isEdit { get; set; }
+    bool IsEdit { get; set; }
     bool IsSuccessful { get; set; }
     string Message { get; set; }
 
@@ -30,5 +30,6 @@ namespace MVPPattern.Views
     // Methods
     void SetPetListBindingSource(BindingSource petList);
     void Show();
+    void StartApplication();
   }
 }

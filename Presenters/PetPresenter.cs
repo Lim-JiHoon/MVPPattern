@@ -33,7 +33,7 @@ namespace MVPPattern.Presenters
       _petsBindingSource = new BindingSource();
       _view.SetPetListBindingSource(_petsBindingSource);
       LoadAllPetList();
-      _view.Show();
+      _view.StartApplication();
     }
     #endregion
 
@@ -43,6 +43,14 @@ namespace MVPPattern.Presenters
     {
       _petList = _repostory.GetAll();
       _petsBindingSource.DataSource = _petList;
+    }
+
+    private void Clear()
+    {
+      _view.PetId = "";
+      _view.PetName = "";
+      _view.PetType = "";
+      _view.PetColour = "";
     }
 
     private void SearchPet(object sender, EventArgs e)
@@ -59,35 +67,70 @@ namespace MVPPattern.Presenters
       _petsBindingSource.DataSource = _petList;
     }
 
-    private void CancelAction(object sender, EventArgs e)
+    private void AddNewPet(object sender, EventArgs e)
     {
-      throw new NotImplementedException();
-    }
-
-    private void SavePet(object sender, EventArgs e)
-    {
-      throw new NotImplementedException();
-    }
-
-    private void DeleteSelectedPet(object sender, EventArgs e)
-    {
-      throw new NotImplementedException();
+      _view.IsEdit = false; 
     }
 
     private void LoadSelectedPetToEdit(object sender, EventArgs e)
     {
-      throw new NotImplementedException();
+      var pet = (PetModel)_petsBindingSource.Current;
+      _view.PetId = pet.Id;
+      _view.PetName = pet.Name;
+      _view.PetType = pet.Type;
+      _view.PetColour = pet.Colour;
+      _view.IsEdit = true;  
     }
 
-    private void AddNewPet(object sender, EventArgs e)
+    private void SavePet(object sender, EventArgs e)
     {
-      throw new NotImplementedException();
+      var pet = new PetModel();
+      pet.Id = _view.PetId;
+      pet.Name = _view.PetName;
+      pet.Type = _view.PetType;
+      pet.Colour = _view.PetColour;
+
+      try
+      {
+        new Common.ModelDataValidation().Validate(pet);
+        if (_view.IsEdit)
+        {
+          _repostory.Edit(pet);
+          _view.Message = "펫 정보가 수정되었습니다.";
+        }
+        else
+        {
+          _repostory.Add(pet);
+          _view.Message = "펫 정보가 저장되었습니다.";
+        }
+        _view.IsSuccessful = true;
+        Clear();
+      }catch(Exception ex)
+      {
+        _view.IsSuccessful=false;
+        _view.Message =ex.Message;
+      }
+    }  
+
+    private void CancelAction(object sender, EventArgs e)
+    {
+      Clear();
+    }     
+
+    private void DeleteSelectedPet(object sender, EventArgs e)
+    {
+      try
+      {
+        var pet = (PetModel)_petsBindingSource.Current;
+        _repostory.Delete(pet.Id);
+        _view.IsSuccessful = true;
+        _view.Message = "펫이 삭제되었습니다.";
+        LoadAllPetList();
+      }catch(Exception ex)
+      {
+        _view.IsSuccessful=!false;
+        _view.Message=ex.Message;
+      }
     }
-
-  
-
-    // Constructor
-
-
   }
 }

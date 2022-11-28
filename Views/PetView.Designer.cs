@@ -32,7 +32,8 @@ namespace MVPPattern
       this.label1 = new System.Windows.Forms.Label();
       this.panel1 = new System.Windows.Forms.Panel();
       this.tab = new System.Windows.Forms.TabControl();
-      this.tabPage1 = new System.Windows.Forms.TabPage();
+      this.tabPagePetList = new System.Windows.Forms.TabPage();
+      this.button1 = new System.Windows.Forms.Button();
       this.btnDelete = new System.Windows.Forms.Button();
       this.btnEdit = new System.Windows.Forms.Button();
       this.btnAddNew = new System.Windows.Forms.Button();
@@ -53,7 +54,7 @@ namespace MVPPattern
       this.label3 = new System.Windows.Forms.Label();
       this.panel1.SuspendLayout();
       this.tab.SuspendLayout();
-      this.tabPage1.SuspendLayout();
+      this.tabPagePetList.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
       this.tabPagePetDetail.SuspendLayout();
       this.SuspendLayout();
@@ -80,7 +81,7 @@ namespace MVPPattern
       // 
       // tab
       // 
-      this.tab.Controls.Add(this.tabPage1);
+      this.tab.Controls.Add(this.tabPagePetList);
       this.tab.Controls.Add(this.tabPagePetDetail);
       this.tab.Dock = System.Windows.Forms.DockStyle.Fill;
       this.tab.Location = new System.Drawing.Point(0, 37);
@@ -89,22 +90,33 @@ namespace MVPPattern
       this.tab.Size = new System.Drawing.Size(800, 413);
       this.tab.TabIndex = 2;
       // 
-      // tabPage1
+      // tabPagePetList
       // 
-      this.tabPage1.Controls.Add(this.btnDelete);
-      this.tabPage1.Controls.Add(this.btnEdit);
-      this.tabPage1.Controls.Add(this.btnAddNew);
-      this.tabPage1.Controls.Add(this.dataGridView);
-      this.tabPage1.Controls.Add(this.btnSearch);
-      this.tabPage1.Controls.Add(this.txtSearch);
-      this.tabPage1.Controls.Add(this.label2);
-      this.tabPage1.Location = new System.Drawing.Point(4, 22);
-      this.tabPage1.Name = "tabPage1";
-      this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-      this.tabPage1.Size = new System.Drawing.Size(792, 387);
-      this.tabPage1.TabIndex = 0;
-      this.tabPage1.Text = "Pet List";
-      this.tabPage1.UseVisualStyleBackColor = true;
+      this.tabPagePetList.Controls.Add(this.button1);
+      this.tabPagePetList.Controls.Add(this.btnDelete);
+      this.tabPagePetList.Controls.Add(this.btnEdit);
+      this.tabPagePetList.Controls.Add(this.btnAddNew);
+      this.tabPagePetList.Controls.Add(this.dataGridView);
+      this.tabPagePetList.Controls.Add(this.btnSearch);
+      this.tabPagePetList.Controls.Add(this.txtSearch);
+      this.tabPagePetList.Controls.Add(this.label2);
+      this.tabPagePetList.Location = new System.Drawing.Point(4, 22);
+      this.tabPagePetList.Name = "tabPagePetList";
+      this.tabPagePetList.Padding = new System.Windows.Forms.Padding(3);
+      this.tabPagePetList.Size = new System.Drawing.Size(792, 387);
+      this.tabPagePetList.TabIndex = 0;
+      this.tabPagePetList.Text = "Pet List";
+      this.tabPagePetList.UseVisualStyleBackColor = true;
+      // 
+      // button1
+      // 
+      this.button1.Location = new System.Drawing.Point(675, 211);
+      this.button1.Name = "button1";
+      this.button1.Size = new System.Drawing.Size(75, 21);
+      this.button1.TabIndex = 8;
+      this.button1.Text = "Delete";
+      this.button1.UseVisualStyleBackColor = true;
+      this.button1.Click += new System.EventHandler(this.button1_Click);
       // 
       // btnDelete
       // 
@@ -286,8 +298,8 @@ namespace MVPPattern
       this.panel1.ResumeLayout(false);
       this.panel1.PerformLayout();
       this.tab.ResumeLayout(false);
-      this.tabPage1.ResumeLayout(false);
-      this.tabPage1.PerformLayout();
+      this.tabPagePetList.ResumeLayout(false);
+      this.tabPagePetList.PerformLayout();
       ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
       this.tabPagePetDetail.ResumeLayout(false);
       this.tabPagePetDetail.PerformLayout();
@@ -300,7 +312,7 @@ namespace MVPPattern
     private System.Windows.Forms.Label label1;
     private System.Windows.Forms.Panel panel1;
     private System.Windows.Forms.TabControl tab;
-    private System.Windows.Forms.TabPage tabPage1;
+    private System.Windows.Forms.TabPage tabPagePetList;
     private System.Windows.Forms.DataGridView dataGridView;
     private System.Windows.Forms.Button btnSearch;
     private System.Windows.Forms.TextBox txtSearch;
@@ -319,6 +331,7 @@ namespace MVPPattern
     private System.Windows.Forms.Label label4;
     private System.Windows.Forms.TextBox txtPetId;
     private System.Windows.Forms.Label label3;
+    private System.Windows.Forms.Button button1;
   }
 }
 

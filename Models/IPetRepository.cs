@@ -10,5 +10,8 @@ namespace MVPPattern.Models
   {
     IEnumerable<PetModel> GetAll();
     IEnumerable<PetModel> GetByValue(string searchValue);
+    void Edit(PetModel pet);
+    void Add(PetModel pet);
+    void Delete(string id);
   }
 }

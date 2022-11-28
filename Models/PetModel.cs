@@ -9,19 +9,19 @@ namespace MVPPattern.Models
 {
   public class PetModel
   {
-    public string PetId { get; set; }
-    public string PetName { get; set; }
-    public string PetType { get; set; }
-    public string PetColour { get; set; }
+    public string Id { get; set; }
+    public string Name { get; set; }
+    public string Type { get; set; }
+    public string Colour { get; set; }
 
     public PetModel() { }
 
     public PetModel(DbDataReader dr)
     {
-      PetId = (string)dr["pet_id"];
-      PetName = (string)dr["pet_name"];
-      PetType = (string)dr["pet_type"];
-      PetColour = (string)dr["pet_colour"];
+      Id = (string)dr["pet_id"];
+      Name = (string)dr["pet_name"];
+      Type = (string)dr["pet_type"];
+      Colour = (string)dr["pet_colour"];
     }
   }
 }
