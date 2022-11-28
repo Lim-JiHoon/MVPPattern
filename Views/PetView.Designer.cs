@@ -40,22 +40,22 @@ namespace MVPPattern
       this.btnSearch = new System.Windows.Forms.Button();
       this.txtSearch = new System.Windows.Forms.TextBox();
       this.label2 = new System.Windows.Forms.Label();
-      this.tabPage2 = new System.Windows.Forms.TabPage();
-      this.label3 = new System.Windows.Forms.Label();
-      this.txtPetId = new System.Windows.Forms.TextBox();
-      this.txtPetName = new System.Windows.Forms.TextBox();
-      this.label4 = new System.Windows.Forms.Label();
-      this.txtPetType = new System.Windows.Forms.TextBox();
-      this.label5 = new System.Windows.Forms.Label();
+      this.tabPagePetDetail = new System.Windows.Forms.TabPage();
+      this.btnCancel = new System.Windows.Forms.Button();
+      this.btnSave = new System.Windows.Forms.Button();
       this.txtPetColour = new System.Windows.Forms.TextBox();
       this.label6 = new System.Windows.Forms.Label();
-      this.btnSave = new System.Windows.Forms.Button();
-      this.btnCancel = new System.Windows.Forms.Button();
+      this.txtPetType = new System.Windows.Forms.TextBox();
+      this.label5 = new System.Windows.Forms.Label();
+      this.txtPetName = new System.Windows.Forms.TextBox();
+      this.label4 = new System.Windows.Forms.Label();
+      this.txtPetId = new System.Windows.Forms.TextBox();
+      this.label3 = new System.Windows.Forms.Label();
       this.panel1.SuspendLayout();
       this.tab.SuspendLayout();
       this.tabPage1.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
-      this.tabPage2.SuspendLayout();
+      this.tabPagePetDetail.SuspendLayout();
       this.SuspendLayout();
       // 
       // label1
@@ -64,7 +64,7 @@ namespace MVPPattern
       this.label1.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
       this.label1.Location = new System.Drawing.Point(12, 9);
       this.label1.Name = "label1";
-      this.label1.Size = new System.Drawing.Size(51, 16);
+      this.label1.Size = new System.Drawing.Size(50, 16);
       this.label1.TabIndex = 0;
       this.label1.Text = "PETS";
       // 
@@ -81,7 +81,7 @@ namespace MVPPattern
       // tab
       // 
       this.tab.Controls.Add(this.tabPage1);
-      this.tab.Controls.Add(this.tabPage2);
+      this.tab.Controls.Add(this.tabPagePetDetail);
       this.tab.Dock = System.Windows.Forms.DockStyle.Fill;
       this.tab.Location = new System.Drawing.Point(0, 37);
       this.tab.Name = "tab";
@@ -168,76 +168,43 @@ namespace MVPPattern
       this.label2.TabIndex = 1;
       this.label2.Text = "PET 조회";
       // 
-      // tabPage2
+      // tabPagePetDetail
       // 
-      this.tabPage2.Controls.Add(this.btnCancel);
-      this.tabPage2.Controls.Add(this.btnSave);
-      this.tabPage2.Controls.Add(this.txtPetColour);
-      this.tabPage2.Controls.Add(this.label6);
-      this.tabPage2.Controls.Add(this.txtPetType);
-      this.tabPage2.Controls.Add(this.label5);
-      this.tabPage2.Controls.Add(this.txtPetName);
-      this.tabPage2.Controls.Add(this.label4);
-      this.tabPage2.Controls.Add(this.txtPetId);
-      this.tabPage2.Controls.Add(this.label3);
-      this.tabPage2.Location = new System.Drawing.Point(4, 22);
-      this.tabPage2.Name = "tabPage2";
-      this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-      this.tabPage2.Size = new System.Drawing.Size(792, 387);
-      this.tabPage2.TabIndex = 1;
-      this.tabPage2.Text = "Pet Detail";
-      this.tabPage2.UseVisualStyleBackColor = true;
+      this.tabPagePetDetail.Controls.Add(this.btnCancel);
+      this.tabPagePetDetail.Controls.Add(this.btnSave);
+      this.tabPagePetDetail.Controls.Add(this.txtPetColour);
+      this.tabPagePetDetail.Controls.Add(this.label6);
+      this.tabPagePetDetail.Controls.Add(this.txtPetType);
+      this.tabPagePetDetail.Controls.Add(this.label5);
+      this.tabPagePetDetail.Controls.Add(this.txtPetName);
+      this.tabPagePetDetail.Controls.Add(this.label4);
+      this.tabPagePetDetail.Controls.Add(this.txtPetId);
+      this.tabPagePetDetail.Controls.Add(this.label3);
+      this.tabPagePetDetail.Location = new System.Drawing.Point(4, 22);
+      this.tabPagePetDetail.Name = "tabPagePetDetail";
+      this.tabPagePetDetail.Padding = new System.Windows.Forms.Padding(3);
+      this.tabPagePetDetail.Size = new System.Drawing.Size(792, 387);
+      this.tabPagePetDetail.TabIndex = 1;
+      this.tabPagePetDetail.Text = "Pet Detail";
+      this.tabPagePetDetail.UseVisualStyleBackColor = true;
       // 
-      // label3
+      // btnCancel
       // 
-      this.label3.AutoSize = true;
-      this.label3.Font = new System.Drawing.Font("굴림", 10F, System.Drawing.FontStyle.Bold);
-      this.label3.Location = new System.Drawing.Point(8, 12);
-      this.label3.Name = "label3";
-      this.label3.Size = new System.Drawing.Size(53, 14);
-      this.label3.TabIndex = 2;
-      this.label3.Text = "Pet ID";
+      this.btnCancel.Location = new System.Drawing.Point(92, 138);
+      this.btnCancel.Name = "btnCancel";
+      this.btnCancel.Size = new System.Drawing.Size(75, 23);
+      this.btnCancel.TabIndex = 11;
+      this.btnCancel.Text = "취소";
+      this.btnCancel.UseVisualStyleBackColor = true;
       // 
-      // txtPetId
+      // btnSave
       // 
-      this.txtPetId.Location = new System.Drawing.Point(11, 29);
-      this.txtPetId.Name = "txtPetId";
-      this.txtPetId.Size = new System.Drawing.Size(100, 21);
-      this.txtPetId.TabIndex = 3;
-      // 
-      // txtPetName
-      // 
-      this.txtPetName.Location = new System.Drawing.Point(11, 70);
-      this.txtPetName.Name = "txtPetName";
-      this.txtPetName.Size = new System.Drawing.Size(100, 21);
-      this.txtPetName.TabIndex = 5;
-      // 
-      // label4
-      // 
-      this.label4.AutoSize = true;
-      this.label4.Font = new System.Drawing.Font("굴림", 10F, System.Drawing.FontStyle.Bold);
-      this.label4.Location = new System.Drawing.Point(8, 53);
-      this.label4.Name = "label4";
-      this.label4.Size = new System.Drawing.Size(78, 14);
-      this.label4.TabIndex = 4;
-      this.label4.Text = "Pet Name";
-      // 
-      // txtPetType
-      // 
-      this.txtPetType.Location = new System.Drawing.Point(132, 70);
-      this.txtPetType.Name = "txtPetType";
-      this.txtPetType.Size = new System.Drawing.Size(100, 21);
-      this.txtPetType.TabIndex = 7;
-      // 
-      // label5
-      // 
-      this.label5.AutoSize = true;
-      this.label5.Font = new System.Drawing.Font("굴림", 10F, System.Drawing.FontStyle.Bold);
-      this.label5.Location = new System.Drawing.Point(129, 53);
-      this.label5.Name = "label5";
-      this.label5.Size = new System.Drawing.Size(74, 14);
-      this.label5.TabIndex = 6;
-      this.label5.Text = "Pet Type";
+      this.btnSave.Location = new System.Drawing.Point(11, 138);
+      this.btnSave.Name = "btnSave";
+      this.btnSave.Size = new System.Drawing.Size(75, 23);
+      this.btnSave.TabIndex = 10;
+      this.btnSave.Text = "저장";
+      this.btnSave.UseVisualStyleBackColor = true;
       // 
       // txtPetColour
       // 
@@ -256,23 +223,56 @@ namespace MVPPattern
       this.label6.TabIndex = 8;
       this.label6.Text = "Pet Colour";
       // 
-      // btnSave
+      // txtPetType
       // 
-      this.btnSave.Location = new System.Drawing.Point(11, 138);
-      this.btnSave.Name = "btnSave";
-      this.btnSave.Size = new System.Drawing.Size(75, 23);
-      this.btnSave.TabIndex = 10;
-      this.btnSave.Text = "저장";
-      this.btnSave.UseVisualStyleBackColor = true;
+      this.txtPetType.Location = new System.Drawing.Point(132, 70);
+      this.txtPetType.Name = "txtPetType";
+      this.txtPetType.Size = new System.Drawing.Size(100, 21);
+      this.txtPetType.TabIndex = 7;
       // 
-      // btnCancel
+      // label5
       // 
-      this.btnCancel.Location = new System.Drawing.Point(92, 138);
-      this.btnCancel.Name = "btnCancel";
-      this.btnCancel.Size = new System.Drawing.Size(75, 23);
-      this.btnCancel.TabIndex = 11;
-      this.btnCancel.Text = "취소";
-      this.btnCancel.UseVisualStyleBackColor = true;
+      this.label5.AutoSize = true;
+      this.label5.Font = new System.Drawing.Font("굴림", 10F, System.Drawing.FontStyle.Bold);
+      this.label5.Location = new System.Drawing.Point(129, 53);
+      this.label5.Name = "label5";
+      this.label5.Size = new System.Drawing.Size(74, 14);
+      this.label5.TabIndex = 6;
+      this.label5.Text = "Pet Type";
+      // 
+      // txtPetName
+      // 
+      this.txtPetName.Location = new System.Drawing.Point(11, 70);
+      this.txtPetName.Name = "txtPetName";
+      this.txtPetName.Size = new System.Drawing.Size(100, 21);
+      this.txtPetName.TabIndex = 5;
+      // 
+      // label4
+      // 
+      this.label4.AutoSize = true;
+      this.label4.Font = new System.Drawing.Font("굴림", 10F, System.Drawing.FontStyle.Bold);
+      this.label4.Location = new System.Drawing.Point(8, 53);
+      this.label4.Name = "label4";
+      this.label4.Size = new System.Drawing.Size(78, 14);
+      this.label4.TabIndex = 4;
+      this.label4.Text = "Pet Name";
+      // 
+      // txtPetId
+      // 
+      this.txtPetId.Location = new System.Drawing.Point(11, 29);
+      this.txtPetId.Name = "txtPetId";
+      this.txtPetId.Size = new System.Drawing.Size(100, 21);
+      this.txtPetId.TabIndex = 3;
+      // 
+      // label3
+      // 
+      this.label3.AutoSize = true;
+      this.label3.Font = new System.Drawing.Font("굴림", 10F, System.Drawing.FontStyle.Bold);
+      this.label3.Location = new System.Drawing.Point(8, 12);
+      this.label3.Name = "label3";
+      this.label3.Size = new System.Drawing.Size(53, 14);
+      this.label3.TabIndex = 2;
+      this.label3.Text = "Pet ID";
       // 
       // PetView
       // 
@@ -289,8 +289,8 @@ namespace MVPPattern
       this.tabPage1.ResumeLayout(false);
       this.tabPage1.PerformLayout();
       ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
-      this.tabPage2.ResumeLayout(false);
-      this.tabPage2.PerformLayout();
+      this.tabPagePetDetail.ResumeLayout(false);
+      this.tabPagePetDetail.PerformLayout();
       this.ResumeLayout(false);
 
     }
@@ -305,7 +305,7 @@ namespace MVPPattern
     private System.Windows.Forms.Button btnSearch;
     private System.Windows.Forms.TextBox txtSearch;
     private System.Windows.Forms.Label label2;
-    private System.Windows.Forms.TabPage tabPage2;
+    private System.Windows.Forms.TabPage tabPagePetDetail;
     private System.Windows.Forms.Button btnDelete;
     private System.Windows.Forms.Button btnEdit;
     private System.Windows.Forms.Button btnAddNew;

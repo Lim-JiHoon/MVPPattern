@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace MVPPattern.Models
 {
-  class IPetRepository
+  public interface IPetRepository
   {
+    IEnumerable<PetModel> GetAll();
+    IEnumerable<PetModel> GetByValue(string searchValue);
   }
 }

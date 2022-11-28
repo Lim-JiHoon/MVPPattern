@@ -12,7 +12,7 @@ namespace MVPPattern.Views
     string PetId { get; set; }
     string PetName { get; set; }
     string PetType { get; set; }
-    string PetIdColour { get; set; }
+    string PetColour { get; set; }
 
     string SearchValue { get; set; }
     bool isEdit { get; set; }

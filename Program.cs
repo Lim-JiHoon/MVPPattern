@@ -1,5 +1,10 @@
-﻿using System;
+﻿using MVPPattern._Repositories;
+using MVPPattern.Models;
+using MVPPattern.Presenters;
+using MVPPattern.Views;
+using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,7 +21,12 @@ namespace MVPPattern
     {
       Application.EnableVisualStyles();
       Application.SetCompatibleTextRenderingDefault(false);
-      Application.Run(new PetView());
+      string sqlConnectionString = Properties.Settings.Default.SqlConnectionString;
+      IPetView view = new PetView();
+      IPetRepository repository = new PetRepository(sqlConnectionString);
+     new PetPresenter(view, repository);
+
+      Application.Run((Form)view);
     }
   }
 }

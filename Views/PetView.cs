@@ -23,14 +23,22 @@ namespace MVPPattern
     {
       InitializeComponent();
 
-      btnSearch.Click += SearchEvent;
+      AssociateAndRaiseViewEvents();
+      tab.TabPages.Remove(tabPagePetDetail);
+    }
+
+    private void AssociateAndRaiseViewEvents()
+    {
+      btnSearch.Click += (s,e) => SearchEvent?.Invoke(s,e);
+      txtSearch.KeyDown += (s, e) => { if (e.KeyCode == Keys.Enter) SearchEvent?.Invoke(s, e); };
+
     }
 
     // Properties
     public string PetId { get => txtPetId.Text; set => txtPetId.Text = value; }
     public string PetName { get => txtPetName.Text; set => txtPetName.Text = value; }
     public string PetType { get => txtPetId.Text; set => txtPetId.Text = value; }
-    public string PetIdColour { get => txtPetColour.Text; set => txtPetColour.Text = value; }
+    public string PetColour { get => txtPetColour.Text; set => txtPetColour.Text = value; }
     public string SearchValue { get => txtSearch.Text; set => txtSearch.Text = value; }
     public bool isEdit { get => _isEdit; set => _isEdit = value; }
     public bool IsSuccessful { get => _isSuccessful; set => _isSuccessful = value; }

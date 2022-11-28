@@ -22,5 +22,14 @@ namespace MVPPattern.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=127.0.0.1;port=8888;uid=root;pwd=zmfflr45901;database=pc")]
+        public string SqlConnectionString {
+            get {
+                return ((string)(this["SqlConnectionString"]));
+            }
+        }
     }
 }
